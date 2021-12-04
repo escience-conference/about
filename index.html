@@ -118,9 +118,16 @@ permalink: /
     {% assign committees = site.data.steering-committee %}
     {% for sc in committees %}
     <div class="col-sm-3 photo">
-        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}"/><br />
+        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" /><br />
         <strong>{{ sc.name }}</strong><br />
         <span class="desc">{% if sc.role %}<strong>{{ sc.role }}</strong>, {% endif %}{{ sc.term }}</span>
     </div>
     {% endfor %}
+</div>
+
+<!-- Advisory Committee -->
+<br />
+<a id="advisory-committee"></a>
+<h3>Advisory Committee</h3>
+<div class="row" style="padding-top: 2em">
 </div>
