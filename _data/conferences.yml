@@ -47,3 +47,25 @@
   accepted: 29
   submitted: 85
   attendees: 470
+
+- edition: 13th
+  year: 2017
+  location: Auckland, New Zealand
+  link: https://web.archive.org/web/20181015044824/http://escience2017.org.nz/
+  current: false
+  image: escience2017.jpg
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/8108702/proceeding
+  accepted: 33
+  submitted: 92
+  attendees: 120
+
+- edition: 12th
+  year: 2016
+  location: Baltimore, USA
+  link: http://escience-2016.idies.jhu.edu/
+  current: false
+  image: escience2016.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/7864292/proceeding
+  accepted: 30
+  submitted: 75
+  attendees: ~100
