@@ -1,0 +1,49 @@
+- edition: 18th
+  year: 2022
+  location: Utah, USA
+  link: /2022
+  current: true
+  image: escience2021.png
+
+- edition: 17th
+  year: 2021
+  location: Innsbruck, Austria
+  link: https://www.escience2021.org/
+  current: false
+  image: escience2021.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/9581321/proceeding
+  accepted: 23
+  submitted: 54
+  attendees: 170
+
+- edition: 16th
+  year: 2020
+  location: Osaka, Japan
+  link: http://escience2020.cmc.osaka-u.ac.jp/
+  current: false
+  image: escience2020.jpg
+  cancelled: true
+  reason: COVID-19
+  announcement: https://escience2020.cmc.osaka-u.ac.jp/2020/03/24/march-24-skipping-the-escience-2020-in-osaka/
+
+- edition: 15th
+  year: 2019
+  location: San Diego, USA
+  link: http://escience2019.sdsc.edu/
+  current: false
+  image: escience2019.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/9036011/proceeding
+  accepted: 25
+  submitted: 98
+  attendees: 170
+
+- edition: 14th
+  year: 2018
+  location: Amsterdam, Netherlands
+  link: https://www.escience2018.com/
+  current: false
+  image: escience2018.jpg
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/8588285/proceeding
+  accepted: 29
+  submitted: 85
+  attendees: 470

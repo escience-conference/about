@@ -1,0 +1,111 @@
+---
+layout: default
+permalink: /
+---
+
+<!-- Current Conference -->
+{% assign conference = site.data.conferences | where: "current",true %}
+{% for c in conference %}
+<br />
+<h3>Current Conference</h3>
+<a class="col-sm-12" href="{{ c.link }}" target="_blank">
+    <div class="current">
+        <img src="/images/{{ c.image }}" alt="{{ c.edition }}" />
+        <div class="content">
+            <h3>{{ c.edition }} IEEE International Conference on e-Science</h3>
+            {{ c.year }} – {{ c.location }}
+        </div>
+    </div>
+</a>
+{% endfor %}
+
+<div class="row" style="padding-top: 2em">
+    <div class="col-md-12 col-lg-8">
+        <h2>What is eScience?</h2>
+        We offer two definitions, one long and one short:
+        <ul class="definition">
+            <li>eScience studies, enacts, and improves the ongoing process of innovation in computationally-intensive or
+                data-intensive research methods; typically this is carried out collaboratively, often using distributed
+                infrastructure. eScience encompasses all fields of research and addresses all stages of the research
+                lifecycle, from formulation of the research questions, through large scale simulations and data
+                analytics, scientific discovery, up to long-term sharing, reusing, and reapplying of the results, data
+                as well as the relevant tools, processes and knowledge.</li>
+            <li>eScience promotes innovation in collaborative, computationally- or data-intensive research across all
+                disciplines, throughout the research lifecycle.</li>
+        </ul>
+        <br />
+        <!-- Map -->
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1wyksMj1150YLsPZzNmntYfjDKEA&ehbc=2E312F" width="100%"
+            height="480" class="map" loading="lazy" allowfullscreen style="margin-bottom: 2em"></iframe>
+    </div>
+
+    <!-- Twitter-->
+    <div class="col-md-12 col-lg-4">
+        <div class="twitter">
+            <div class="twitter-header">
+                <i class="fab fa-twitter"></i> @eScience
+            </div>
+            <a class="twitter-timeline" href="https://twitter.com/escience?ref_src=twsrc%5Etfw" data-dnt="true"
+                data-theme="light" data-chrome=" nofooter noheader" data-height="52em" it="twitter-timeline">
+                Tweets by eScience</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<!-- Past Conferences -->
+<a id="past-conferences"></a>
+<h3>Past Conferences</h3>
+<div class="row" style="padding-top: 2em">
+    {% assign conferences = site.data.conferences | where: "current",false | sort: "year" | reverse %}
+    {% for c in conferences %}
+    <div class="col-md-12 col-lg-12">
+        <div class="conference">
+            <div class="header">
+                <a href="{{ c.link }}" target="_blank">
+                    <strong>{{ c.edition }} IEEE International Conference on e-Science</strong>
+                </a><br />
+                {{ c.year }} – {{ c.location }}
+
+                <div class="row">
+                    {% if c.accepted %}
+                    <div class="col-sm-9 statistics">
+                        <strong><i class="fas fa-chart-bar"></i> Statistics<br /></strong>
+                        <span class="numbers">
+                            Full papers accepted: <span class="number">{{ c.accepted }}</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Full papers submitted: <span class="number">{{ c.submitted }}</span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Attendees: <span class="number">{{ c.attendees }}</span>
+                        </span>
+                    </div>
+
+                    {% else if c.cancelled %}
+                    <div class="col-sm-6 cancelled">
+                        <i class="fas fa-exclamation-triangle"></i> Cancelled {%if c.reason %} due to {{ c.reason }} {%
+                        endif %}<br />
+                        {% if c.announcement %}
+                        <a href="{{ c.announcement }}" target="_blank">Read the announcement here</a>.
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if c.proceedings %}
+                    <div class="col-sm-2" style="text-align: right">
+                        <a href="{{ c.proceedings }}" target="_blank" style="line-height: 2.5em">
+                            <span class="proceedings"><i class="far fa-circle"
+                                    style="font-size: 0.75em"></i>&nbsp;&nbsp;Proceedings</span>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <a href="{{ c.link }}" target="_blank">
+                <img src="/images/{{ c.image }}" alt="{{ c.edition }}" />
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
