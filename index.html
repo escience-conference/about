@@ -10,7 +10,7 @@ permalink: /
 <h3>Current Conference</h3>
 <a class="col-sm-12" href="{{ c.link }}" target="_blank">
     <div class="current">
-        <img src="{{ site.baseurl }}/images/{{ c.image }}" alt="{{ c.edition }}" />
+        <img src="{{ site.baseurl }}/images/conferences/{{ c.image }}" alt="{{ c.edition }}" />
         <div class="content">
             <h3>{{ c.edition }} IEEE International Conference on e-Science</h3>
             {{ c.year }} – {{ c.location }}
@@ -103,7 +103,7 @@ permalink: /
                 </div>
             </div>
             <a href="{{ c.link }}" target="_blank">
-                <img src="{{ site.baseurl }}/images/{{ c.image }}" alt="{{ c.edition }}" />
+                <img src="{{ site.baseurl }}/images/conferences/{{ c.image }}" alt="{{ c.edition }}" />
             </a>
         </div>
     </div>
@@ -115,4 +115,12 @@ permalink: /
 <a id="steering-committee"></a>
 <h3>Steering Committee</h3>
 <div class="row" style="padding-top: 2em">
+    {% assign committees = site.data.steering-committee %}
+    {% for sc in committees %}
+    <div class="col-sm-3 photo">
+        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}"/><br />
+        <strong>{{ sc.name }}</strong><br />
+        <span class="desc">{% if sc.role %}<strong>{{ sc.role }}</strong>, {% endif %}{{ sc.term }}</span>
+    </div>
+    {% endfor %}
 </div>
