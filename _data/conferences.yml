@@ -80,3 +80,113 @@
   accepted: 31
   submitted: 123
   attendees: 160
+
+- edition: 10th
+  year: 2014
+  location: Guarujá, Brazil
+  link: 
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/6967883/proceeding
+  accepted: 38
+  submitted: 101
+  attendees: 210
+
+- edition: 9th
+  year: 2013
+  location: Beijing, China
+  link: 
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/6680792/proceeding
+  accepted: 41
+  submitted: 98
+  attendees: 259
+
+- edition: 8th
+  year: 2012
+  location: Chicago, USA
+  link: https://web.archive.org/web/20121213015336/http://www.ci.uchicago.edu/escience2012/
+  current: false
+  image: escience2012.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/6389598/proceeding
+  accepted: 48
+  submitted: 154
+  attendees: ~225
+
+- edition: 7th
+  year: 2011
+  location: Stockholm, Sweden
+  link: https://www.escience2011.org/
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/6122900/proceeding
+  accepted: 54
+  submitted: 110
+  attendees: 294
+
+- edition: 6th
+  year: 2010
+  location: Brisbane, Australia
+  link: http://www.escience2010.org/
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/5689838/proceeding
+  accepted: 44
+  submitted: 142
+  attendees: 210
+
+- edition: 5th
+  year: 2009
+  location: Oxford, UK
+  link: 
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/5379698/proceeding
+  accepted: 51
+  submitted: 177
+  attendees: 248
+
+- edition: 4th
+  year: 2008
+  location: Indianapolis, USA
+  link: https://escience2008.iu.edu/
+  current: false
+  image: escience2008.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/4736721/proceeding
+  accepted: 60
+  submitted: 206
+  attendees: 268
+
+- edition: 3rd
+  year: 2007
+  location: Bangalore, India
+  link: http://www.escience2007.org/
+  current: false
+  image: escience2007.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/4426856/proceeding
+  accepted: 60
+  submitted: 206
+  attendees: 200+
+
+- edition: 2nd
+  year: 2006
+  location: Amsterdam, Netherlands
+  link: http://www.escience-meeting.org/
+  current: false
+  image: noimage.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/4030972/proceeding
+  accepted: 60
+  submitted: 106
+  attendees: 200+
+
+- edition: 1st
+  year: 2005
+  location: Melbourne, Australia
+  link: http://www.cloudbus.org/escience/
+  current: false
+  image: escience2005.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/10501/proceeding
+  accepted: 54
+  submitted: 175
+  attendees: 160+
