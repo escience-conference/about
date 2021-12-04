@@ -69,3 +69,14 @@
   accepted: 30
   submitted: 75
   attendees: ~100
+
+- edition: 11th
+  year: 2015
+  location: Munich, Germany
+  link: http://escience2015.mnm-team.org/
+  current: false
+  image: escience2015.png
+  proceedings: https://ieeexplore.ieee.org/xpl/conhome/7303998/proceeding
+  accepted: 31
+  submitted: 123
+  attendees: 160
