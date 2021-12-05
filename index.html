@@ -130,4 +130,12 @@ permalink: /
 <a id="advisory-committee"></a>
 <h3>Advisory Committee</h3>
 <div class="row" style="padding-top: 2em">
+    {% assign advisory_committee = site.data.advisory-committee %}
+    {% for sc in advisory_committee %}
+    <div class="col-sm-2 photo">
+        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" /><br />
+        <strong>{{ sc.name }}</strong><br />
+        {% if sc.comment %}<span class="desc" style="font-size: 0.7em">{{ sc.comment }}</span>{% endif %}
+    </div>
+    {% endfor %}
 </div>
