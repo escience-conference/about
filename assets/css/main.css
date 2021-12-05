@@ -1717,9 +1717,11 @@ img{
     height:1.25em;
     vertical-align:text-bottom
 }
+
 .single .post-footer{
-    margin-top:3rem
+    margin-top: 3rem
 }
+
 .single .post-footer .post-info{
     border-bottom:1px solid #f0f0f0;
     padding:1rem 0 0.3rem
@@ -2654,17 +2656,26 @@ footer{
     width:100%;
     text-align:center;
     line-height:1.25rem;
-    padding:1rem 0
+    padding:1rem 0;
 }
+
 footer .footer-container{
-    font-size:.875rem
+    font-size:.875rem;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    border-top: 1px solid #999;
+    margin-left: 10em;
+    margin-right: 10em;
 }
+
 footer .footer-container .footer-line{
-    width:100%
+    width:100%;
 }
+
 footer .footer-container .footer-line .icp-br{
     display:none
 }
+
 .blur footer{
     -webkit-filter:blur(1.5px);
     -moz-filter:blur(1.5px);
