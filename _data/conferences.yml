@@ -1,9 +1,19 @@
+- edition: 19th
+  year: 2023
+  location: Limassol, Cyprus
+  link: /2023
+  current: true
+  image: escience2023.png
+
 - edition: 18th
   year: 2022
   location: Utah, USA
   link: /2022
-  current: true
+  current: false
   image: escience2022.png
+  accepted: 37
+  submitted: 58
+  attendees: 180
 
 - edition: 17th
   year: 2021
