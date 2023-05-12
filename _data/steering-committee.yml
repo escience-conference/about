@@ -1,36 +1,44 @@
 - name: David Abramson 
   role: Chair
-  term: Third term through 2022
+  term: Third term through 2023
   photo: abramson.jpg
 
 - name: Ilkay Altintas 
-  term: First term through 2022
+  term: First term through 2023
   photo: altintas.jpg
+  
+- name: Rosa Badia 
+  term: First term through 2025
+  photo: badia.jpg
 
 - name: Kris Bubendorfer 
-  term: Second term through 2023
+  term: Second term through 2024
   photo: bubendorfer.jpg
 
 - name: Kyle Chard 
-  term: Second term through 2023
+  term: Second term through 2024
   photo: chard.jpg
 
 - name: Ewa Deelman 
-  term: Third term through 2022
+  term: Third term through 2023
   photo: deelman.jpg
 
 - name: Thomas Fahringer 
   term: First term through 2024
   photo: fahringer.jpg
+ 
+- name: Sandra Gesing 
+  term: First term through 2025
+  photo: gesing.png
   
 - name: Nick Jones 
-  term: Second term through 2023
+  term: Second term through 2024
   photo: jones.jpg
 
 - name: Dieter Kranzlmüller 
-  term: Third term through 2023
+  term: Third term through 2024
   photo: kranzlmueller.jpg
 
 - name: Paul Roe 
-  term: Second term through 2023
+  term: Second term through 2024
   photo: roe.jpg
