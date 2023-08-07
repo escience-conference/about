@@ -59,7 +59,7 @@ permalink: /
 <a id="past-conferences"></a>
 <h3>Past Conferences</h3>
 <div class="row" style="padding-top: 2em">
-    {% assign conferences = site.data.conferences | where: "current",false | sort: "year" | reverse %}
+    {% assign conferences = site.data.conferences | sort: "year" | reverse %}
     {% for c in conferences %}
     <div class="col-md-12 col-lg-12">
         <div class="conference">
