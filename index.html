@@ -82,7 +82,7 @@ permalink: /
                         </span>
                     </div>
 
-                    {% else if c.cancelled %}
+                    {% if c.cancelled %}
                     <div class="col-sm-6 cancelled">
                         <i class="fas fa-exclamation-triangle"></i> Cancelled {%if c.reason %} due to {{ c.reason }} {%
                         endif %}<br />
