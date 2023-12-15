@@ -1,8 +1,16 @@
+- edition: 20th
+  year: 2024
+  location: Osaka, Japan
+  link: /2024
+  current: true
+  image: escience2024.png
+
+  
 - edition: 19th
   year: 2023
   location: Limassol, Cyprus
   link: /2023
-  current: true
+  current: false
   image: escience2023.png
   accepted: 40
   submitted: 81
