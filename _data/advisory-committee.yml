@@ -1,6 +1,12 @@
+- name: David Abramson 
+  photo: abramson.jpg
+ 
 - name: Rajkumar Buyya
   photo: buyya.jpg
 
+- name: Ewa Deelman 
+  photo: deelman.jpg
+  
 - name: Dave De Roure
   photo: deroure.jpg
 
