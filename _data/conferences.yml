@@ -2,7 +2,7 @@
   year: 2025
   location: 
   link: /2025
-  current: true
+  current: false
   image: escience2025.png
 
 - edition: 20th
