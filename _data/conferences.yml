@@ -1,9 +1,19 @@
+- edition: 21st
+  year: 2025
+  location: 
+  link: /2025
+  current: true
+  image: escience2025.png
+
 - edition: 20th
   year: 2024
   location: Osaka, Japan
   link: /2024
   current: true
   image: escience2024.png
+  accepted: 0
+  submitted: 0
+  attendees: 0
 
 - edition: 19th
   year: 2023
