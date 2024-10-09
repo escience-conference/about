@@ -2,14 +2,14 @@
   year: 2025
   location: Chicago, USA
   link: /2025
-  current: false
+  current: true
   image: escience2025.png
 
 - edition: 20th
   year: 2024
   location: Osaka, Japan
   link: /2024
-  current: true
+  current: false
   image: escience2024.png
   accepted: 30
   submitted: 76
