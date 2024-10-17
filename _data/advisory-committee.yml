@@ -20,6 +20,12 @@
 - name: Tony Hey
   photo: hey.jpg
 
+- name: Nick Jones 
+  photo: jones.jpg
+
+- name: Dieter Kranzlmüller 
+  photo: kranzlmueller.jpg
+  
 - name: Erwin Laurie
   photo: noimage.png 
 
