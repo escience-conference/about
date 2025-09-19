@@ -1,3 +1,10 @@
+- edition: 22nd
+  year: 2026
+  location: Naples, Italy
+  link: /2026
+  current: true
+  image: escience2025.png
+
 - edition: 21st
   year: 2025
   location: Chicago, USA
