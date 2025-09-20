@@ -9,7 +9,7 @@
   year: 2025
   location: Chicago, USA
   link: /2025
-  current: true
+  current: false
   image: escience2025.png
   accepted: 33
   submitted: 98
