@@ -3,156 +3,196 @@ layout: default
 permalink: /
 ---
 
-<!-- Current Conference -->
-{% assign conference = site.data.conferences | where: "current",true %}
-{% for c in conference %}
-<br />
-<h3>Current Conference</h3>
-<a class="col-sm-12" href="{{ c.link }}" target="_blank">
-    <div class="current">
-        <img src="{{ site.baseurl }}/images/conferences/{{ c.image }}" alt="{{ c.edition }}" />
-        <div class="content">
-            <h3>{{ c.edition }} IEEE International Conference on e-Science</h3>
-            {{ c.year }} – {{ c.location }}
-        </div>
-    </div>
-</a>
-{% endfor %}
+{% assign conference = site.data.conferences | where: "current", true | first %}
+{% assign total_papers = 0 %}
+{% for c in site.data.conferences %}{% if c.accepted %}{% assign total_papers = total_papers | plus: c.accepted %}{% endif %}{% endfor %}
+{% assign editions = site.data.conferences | size %}
 
-<!--
-<h3>Call to host future eScience Conferences</h3>
-<a class="col-sm-12" href="escience-cfp.pdf" target="_blank">
-    <div class="current">
-        <div class="content">
-            <h5>Interested in hosting eScience 2025-2027? <br /> Please review the CFP for details. <br /> Application Deadline: April 30, 2024.</h5>
+<!-- ===================== HERO / CURRENT CONFERENCE ===================== -->
+{% if conference %}
+<section class="es-hero">
+    <div class="es-hero-blob es-hero-blob--1"></div>
+    <div class="es-hero-blob es-hero-blob--2"></div>
+    <div class="es-hero-content">
+        <span class="es-hero-eyebrow"><i class="fas fa-star"></i> Next Edition</span>
+        <h1 class="es-hero-title">eScience {{ conference.year }}</h1>
+        <p class="es-hero-sub">{{ conference.edition }} IEEE International Conference on e-Science</p>
+        <div class="es-hero-meta">
+            <span class="es-chip"><i class="fas fa-location-dot"></i> {{ conference.location }}</span>
         </div>
+        <a class="es-btn" href="{{ conference.link }}" target="_blank" rel="noopener">
+            Explore the Conference <i class="fas fa-arrow-right"></i>
+        </a>
     </div>
-</a>
--->
+    <a class="es-hero-figure" href="{{ conference.link }}" target="_blank" rel="noopener" aria-label="eScience {{ conference.year }} website">
+        <img src="{{ site.baseurl }}/images/conferences/{{ conference.image }}" alt="eScience {{ conference.year }} — {{ conference.location }}" />
+    </a>
+</section>
+{% endif %}
 
-<div class="row" style="padding-top: 2em">
-    <div class="col-md-12 col-lg-8">
+<!-- ===================== SERIES STATS ===================== -->
+<section class="es-stats">
+    <div class="es-stat">
+        <span class="es-stat-num" style="--k:var(--c-indigo)">{{ editions }}</span>
+        <span class="es-stat-label">Editions</span>
+    </div>
+    <div class="es-stat">
+        <span class="es-stat-num" style="--k:var(--c-teal)">2005</span>
+        <span class="es-stat-label">Running since</span>
+    </div>
+    <div class="es-stat">
+        <span class="es-stat-num" style="--k:var(--c-orange)">14</span>
+        <span class="es-stat-label">Host countries</span>
+    </div>
+    <div class="es-stat">
+        <span class="es-stat-num" style="--k:var(--c-rose)">{{ total_papers }}+</span>
+        <span class="es-stat-label">Papers presented</span>
+    </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="es-section" id="about">
+    <header class="es-section-head">
+        <span class="es-kicker" style="--k:var(--c-indigo)">Overview</span>
         <h2>What is eScience?</h2>
-        We offer two definitions, one long and one short:
-        <ul class="definition">
-            <li>eScience studies, enacts, and improves the ongoing process of innovation in computationally-intensive or
-                data-intensive research methods; typically this is carried out collaboratively, often using distributed
-                infrastructure. eScience encompasses all fields of research and addresses all stages of the research
-                lifecycle, from formulation of the research questions, through large scale simulations and data
-                analytics, scientific discovery, up to long-term sharing, reusing, and reapplying of the results, data
-                as well as the relevant tools, processes and knowledge.</li>
-            <li>eScience promotes innovation in collaborative, computationally- or data-intensive research across all
-                disciplines, throughout the research lifecycle.</li>
-        </ul>
-        <br />
-        <!-- Map -->
-        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1wyksMj1150YLsPZzNmntYfjDKEA&ehbc=2E312F" width="100%"
-            height="480" class="map" loading="lazy" allowfullscreen style="margin-bottom: 2em"></iframe>
-    </div>
-
-    <!-- Twitter-->
-    <div class="col-md-12 col-lg-4">
-        <div class="twitter">
-            <div class="twitter-header">
-                <i class="fab fa-twitter"></i> @eScience
-            </div>
-            <a class="twitter-timeline" href="https://twitter.com/escience?ref_src=twsrc%5Etfw" data-dnt="true"
-                data-theme="light" data-chrome=" nofooter noheader" data-height="835" it="twitter-timeline">
-                Tweets by eScience</a>
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <p class="es-section-lead">We offer two definitions &mdash; one short, one long.</p>
+    </header>
+    <div class="es-def-grid">
+        <div class="es-def" style="--k:var(--c-sky)">
+            <div class="es-def-tag">In brief</div>
+            <p>eScience promotes innovation in collaborative, computationally- or data-intensive research
+                across all disciplines, throughout the research lifecycle.</p>
+        </div>
+        <div class="es-def" style="--k:var(--c-violet)">
+            <div class="es-def-tag">In full</div>
+            <p>eScience studies, enacts, and improves the ongoing process of innovation in
+                computationally-intensive or data-intensive research methods; typically this is carried out
+                collaboratively, often using distributed infrastructure. eScience encompasses all fields of
+                research and addresses all stages of the research lifecycle, from formulation of the research
+                questions, through large scale simulations and data analytics, scientific discovery, up to
+                long-term sharing, reusing, and reapplying of the results, data as well as the relevant tools,
+                processes and knowledge.</p>
         </div>
     </div>
-</div>
+</section>
 
-<br />
+<!-- ===================== MAP ===================== -->
+<section class="es-section">
+    <header class="es-section-head">
+        <span class="es-kicker" style="--k:var(--c-sky)">Worldwide</span>
+        <h2>Two decades around the globe</h2>
+        <p class="es-section-lead">Every marker is a past or upcoming host city of the eScience Conference.</p>
+    </header>
+    <div class="es-map-card">
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1wyksMj1150YLsPZzNmntYfjDKEA&ehbc=2E312F"
+            width="100%" height="480" loading="lazy" allowfullscreen title="eScience host cities map"></iframe>
+    </div>
+</section>
 
-<!-- Past Conferences -->
-<a id="past-conferences"></a>
-<h3>Past Conferences</h3>
-<div class="row" style="padding-top: 2em">
-    {% assign conferences = site.data.conferences | sort: "year" | reverse %}
-    {% for c in conferences %}
-    <div class="col-md-12 col-lg-12">
-        <div class="conference">
-            <div class="header">
-                <a href="{{ c.link }}" target="_blank">
-                    <strong>{{ c.edition }} IEEE International Conference on e-Science</strong>
-                </a><br />
-                {{ c.year }} – {{ c.location }}
+<!-- ===================== PAST CONFERENCES ===================== -->
+<section class="es-section" id="past-conferences">
+    <header class="es-section-head">
+        <span class="es-kicker" style="--k:var(--c-violet)">Archive</span>
+        <h2>Past Conferences</h2>
+        <p class="es-section-lead">Explore every edition &mdash; statistics, host cities, and proceedings.</p>
+    </header>
+    <div class="es-conf-grid">
+        {% assign conferences = site.data.conferences | sort: "year" | reverse %}
+        {% for c in conferences %}{% unless c.current %}
+        <article class="es-conf-card" style="--accent: {% cycle '#6366f1','#0ea5e9','#14b8a6','#f59e0b','#ec4899','#8b5cf6','#10b981','#f97316','#f43f5e','#3b82f6' %}">
+            <a class="es-conf-media" href="{{ c.link }}" target="_blank" rel="noopener">
+                <img src="{{ site.baseurl }}/images/conferences/{{ c.image }}" alt="eScience {{ c.year }}" loading="lazy" />
+                <span class="es-conf-year">{{ c.year }}</span>
+            </a>
+            <div class="es-conf-body">
+                <h3 class="es-conf-title">{{ c.location }}</h3>
+                <p class="es-conf-edition">{{ c.edition }} IEEE Intl. Conference on e-Science</p>
 
-                <div class="row">
-                    {% if c.accepted %}
-                    <div class="col-sm-9 statistics">
-                        <strong><i class="fas fa-chart-bar"></i> Statistics<br /></strong>
-                        <span class="numbers">
-                            Full papers accepted: <span class="number">{{ c.accepted }}</span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Full papers submitted: <span class="number">{{ c.submitted }}</span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Attendees: <span class="number">{{ c.attendees }}</span>
-                        </span>
-                    </div>
+                {% if c.accepted %}
+                <div class="es-conf-stats">
+                    <span class="es-pill"><b>{{ c.accepted }}</b> accepted</span>
+                    <span class="es-pill"><b>{{ c.submitted }}</b> submitted</span>
+                    <span class="es-pill"><b>{{ c.attendees }}</b> attendees</span>
+                </div>
+                {% endif %}
+
+                {% if c.cancelled %}
+                <div class="es-conf-cancelled">
+                    <i class="fas fa-triangle-exclamation"></i> Cancelled{% if c.reason %} &mdash; {{ c.reason }}{% endif %}{% if c.announcement %} &middot; <a href="{{ c.announcement }}" target="_blank" rel="noopener">announcement</a>{% endif %}
+                </div>
+                {% endif %}
+
+                <div class="es-conf-foot">
+                    {% if c.link and c.link != "" %}
+                    <a class="es-conf-link" href="{{ c.link }}" target="_blank" rel="noopener">Website <i class="fas fa-arrow-up-right-from-square"></i></a>
                     {% endif %}
-
-                    {% if c.cancelled %}
-                    <div class="col-sm-6 cancelled">
-                        <i class="fas fa-exclamation-triangle"></i> Cancelled {%if c.reason %} due to {{ c.reason }} {%
-                        endif %}<br />
-                        {% if c.announcement %}
-                        <a href="{{ c.announcement }}" target="_blank">Read the announcement here</a>.
-                        {% endif %}
-                    </div>
-                    {% endif %}
-
                     {% if c.proceedings %}
-                    <div class="col-sm-2" style="text-align: right">
-                        <a href="{{ c.proceedings }}" target="_blank" style="line-height: 2.5em">
-                            <span class="proceedings"><i class="far fa-circle"
-                                    style="font-size: 0.75em"></i>&nbsp;&nbsp;Proceedings</span>
-                        </a>
-                    </div>
+                    <a class="es-conf-proc" href="{{ c.proceedings }}" target="_blank" rel="noopener"><i class="far fa-file-lines"></i> Proceedings</a>
                     {% endif %}
                 </div>
             </div>
-            <a href="{{ c.link }}" target="_blank">
-                <img src="{{ site.baseurl }}/images/conferences/{{ c.image }}" alt="{{ c.edition }}" />
-            </a>
+        </article>
+        {% endunless %}{% endfor %}
+    </div>
+</section>
+
+<!-- ===================== STEERING COMMITTEE ===================== -->
+<section class="es-section" id="steering-committee">
+    <header class="es-section-head">
+        <span class="es-kicker" style="--k:var(--c-emerald)">People</span>
+        <h2>Steering Committee</h2>
+        <p class="es-section-lead">Overseeing the long-term planning and success of the conference series.</p>
+    </header>
+    <div class="es-people">
+        {% for sc in site.data.steering-committee %}
+        <figure class="es-person{% if sc.role %} es-person--lead{% endif %}">
+            <div class="es-person-photo">
+                <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" loading="lazy" />
+            </div>
+            {% if sc.role %}<span class="es-person-role">{{ sc.role }}</span>{% endif %}
+            <figcaption>
+                <span class="es-person-name">{{ sc.name }}</span>
+                <span class="es-person-term">{{ sc.term }}{% if sc.comment %} &middot; {{ sc.comment }}{% endif %}</span>
+            </figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- ===================== ADVISORY COMMITTEE ===================== -->
+<section class="es-section" id="advisory-committee">
+    <header class="es-section-head">
+        <span class="es-kicker" style="--k:var(--c-amber)">People</span>
+        <h2>Advisory Committee</h2>
+        <p class="es-section-lead">Former steering members who continue to advise the series.</p>
+    </header>
+    <div class="es-people es-people--sm">
+        {% for sc in site.data.advisory-committee %}
+        <figure class="es-person">
+            <div class="es-person-photo">
+                <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" loading="lazy" />
+            </div>
+            <figcaption>
+                <span class="es-person-name">{{ sc.name }}</span>
+                {% if sc.comment %}<span class="es-person-term">{{ sc.comment }}</span>{% endif %}
+            </figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- ===================== CHARTER ===================== -->
+<section class="es-section" id="charter">
+    <details class="es-charter">
+        <summary class="es-charter-summary">
+            <span class="es-charter-head">
+                <span class="es-kicker" style="--k:var(--c-blue)">Governance</span>
+                <span class="es-charter-title">Steering Committee Charter</span>
+            </span>
+            <i class="fas fa-chevron-down es-charter-chevron"></i>
+        </summary>
+        <div class="es-charter-body">
+            {% include charter.html %}
         </div>
-    </div>
-    {% endfor %}
-</div>
-
-<br />
-<!-- Steering Committee -->
-<a id="steering-committee"></a>
-<h3>Steering Committee</h3>
-<div class="row" style="padding-top: 2em">
-    {% assign committees = site.data.steering-committee %}
-    {% for sc in committees %}
-    <div class="col-sm-3 photo">
-        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" /><br />
-        <strong>{{ sc.name }}</strong><br />
-        <span class="desc">{% if sc.role %}<strong>{{ sc.role }}</strong>, {% endif %}{{ sc.term }}</span>
-    </div>
-    {% endfor %}
-</div>
-
-<!-- Advisory Committee -->
-<br />
-<a id="advisory-committee"></a>
-<h3>Advisory Committee</h3>
-<div class="row" style="padding-top: 2em">
-    {% assign advisory_committee = site.data.advisory-committee %}
-    {% for sc in advisory_committee %}
-    <div class="col-sm-2 photo">
-        <img src="{{ site.baseurl }}/images/sc/{{ sc.photo }}" alt="{{ sc.name }}" /><br />
-        <strong>{{ sc.name }}</strong><br />
-        {% if sc.comment %}<span class="desc" style="font-size: 0.7em">{{ sc.comment }}</span>{% endif %}
-    </div>
-    {% endfor %}
-</div>
-
-<!-- Charter -->
-<br />
-<a id="charter"></a>
-{% include charter.html %}
+    </details>
+</section>

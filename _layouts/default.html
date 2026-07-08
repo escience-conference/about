@@ -7,7 +7,7 @@
 
 <body header-desktop="fixed" header-mobile="auto">
     <script type=text/javascript>
-        (window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches: 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');
+        (window.localStorage && localStorage.getItem('theme') === 'dark') && document.body.setAttribute('theme', 'dark');
         </script>
     <div id=mask></div>
 
