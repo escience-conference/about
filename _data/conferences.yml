@@ -5,6 +5,16 @@
   current: true
   image: escience2026.png
 
+- edition: 22nd
+  year: 2026
+  location: Naples, Italy
+  link: /2026
+  current: false
+  image: escience2026.png
+  accepted: 56
+  submitted: 186
+  attendees: 242
+
 - edition: 21st
   year: 2025
   location: Chicago, USA
